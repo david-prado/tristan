@@ -1,4 +1,8 @@
 *.exe
-*.d
+flds.d
+prtl.d
 *.dwf
 *.~f
+tristan.e*
+tristan*.pdb
+tristan.o*
