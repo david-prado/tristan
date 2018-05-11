@@ -1,9 +1,11 @@
-#PBS -N tristan
-#PBS -q gpu-n1h72
+#PBS -q phi-n6h96
 #PBS -l nodes=1:ppn=1
-#PBS -l walltime=01:00:00
+#PBS -l walltime=96:00:00
 
 cd $PBS_O_WORKDIR
-LAST="64"
+rm flds.d prtl.d
+cp flds_64.d flds.d
+cp prtl_64.d prtl.d
 
-echo "$LAST" | time ./tristan
+STEPS=10000
+echo $STEPS | time ./tristan
